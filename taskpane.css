@@ -1,0 +1,89 @@
+html, body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  margin: 0;
+  padding: 8px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+#app-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.block {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #fff;
+}
+
+.block h3 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6px;
+}
+
+.field label {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.field input[type="range"] {
+  width: 100%;
+}
+
+.field input[type="number"],
+.field select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lang-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.lang-row select {
+  flex: 1;
+}
+
+button#run {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 注記（p.note）のフォントサイズを小さくし、文字を赤色にする */
+p.note {
+  font-size: 11px;
+  color: #d11a1a !important; 
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+/* 修正：セレクタを強力にして、強制的に濃紺を適用させます */
+html body #app-body p.note.large {
+  font-size: 13px !important;
+  color: #002060 !important; /* 強制的に濃紺（ダークネイビー）に変える */
+}
+
+/* リンクの色も同様に強力にキープします */
+html body #app-body p.note.large a {
+  color: #0078d7 !important; /* リンクの青色を維持 */
+  text-decoration: underline !important;
+}
